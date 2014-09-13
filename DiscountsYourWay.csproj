@@ -165,7 +165,55 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="css\bootstrap-glyphicons.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\styles.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphiconshalflings-regular.svg" />
+    <Content Include="html\index.html" />
+    <Content Include="images\background.jpg" />
+    <Content Include="images\background.png" />
+    <Content Include="images\badge_bootstrap.jpg" />
+    <Content Include="images\badge_css3.jpg" />
+    <Content Include="images\badge_html5.jpg" />
+    <Content Include="images\banner.JPG" />
+    <Content Include="images\brightGuy.png" />
+    <Content Include="images\brightGuy2.png" />
+    <Content Include="images\brightGuy7.png" />
+    <Content Include="images\Capture.JPG" />
+    <Content Include="images\cardProgram.JPG" />
+    <Content Include="images\cardProgramWith details.png" />
+    <Content Include="images\carousel_large_01.jpg" />
+    <Content Include="images\carousel_large_02.jpg" />
+    <Content Include="images\carousel_medium_01.jpg" />
+    <Content Include="images\carousel_medium_02.jpg" />
+    <Content Include="images\carousel_small_01.jpg" />
+    <Content Include="images\carousel_small_02.jpg" />
+    <Content Include="images\common-hex-colors.JPG" />
+    <Content Include="images\dscCard.png" />
+    <Content Include="images\dyw3.JPG" />
+    <Content Include="images\dywCOM.JPG" />
+    <Content Include="images\dYWLOGO.jpg" />
+    <Content Include="images\freeSignup.JPG" />
+    <Content Include="images\item_psd2html5.jpg" />
+    <Content Include="images\item_webhosting101.jpg" />
+    <Content Include="images\li-bullets.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logoTXT.png" />
+    <Content Include="images\social-media.JPG" />
+    <Content Include="images\TitleImage.png" />
+    <Content Include="images\TopBannerSloganImage.png" />
+    <Content Include="images\TopBannerSloganImage1.png" />
+    <Content Include="images\TopBannerSloganImage2.png" />
+    <Content Include="images\TopBannerSloganImage3.png" />
+    <Content Include="images\Untitled.png" />
+    <Content Include="images\welcome.JPG" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery-1.8.2.min.js" />
+    <Content Include="js\modernizr-2.6.2.min.js" />
+    <Content Include="js\script.js" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -188,6 +236,13 @@
       <DependentUpon>DYW.edmx</DependentUpon>
       <LastGenOutput>DYW.cs</LastGenOutput>
     </Content>
+    <Content Include="fonts\glyphiconshalflings-regular.eot" />
+    <Content Include="fonts\glyphiconshalflings-regular.otf" />
+    <Content Include="fonts\glyphiconshalflings-regular.ttf" />
+    <Content Include="fonts\glyphiconshalflings-regular.woff" />
+    <Content Include="fonts\playtime.ttf" />
+    <Content Include="fonts\PlaytimeOblique.ttf" />
+    <Content Include="fonts\PlaytimeWithHotToddies3D.ttf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -378,9 +433,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="css\" />
-    <Folder Include="html\" />
-    <Folder Include="js\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
