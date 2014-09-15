@@ -13,26 +13,26 @@ namespace DiscountsYourWay
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/WebFormsJs").Include(
-                            "~/Scripts/WebForms/WebForms.js",
-                            "~/Scripts/WebForms/WebUIValidation.js",
-                            "~/Scripts/WebForms/MenuStandards.js",
-                            "~/Scripts/WebForms/Focus.js",
-                            "~/Scripts/WebForms/GridView.js",
-                            "~/Scripts/WebForms/DetailsView.js",
-                            "~/Scripts/WebForms/TreeView.js",
-                            "~/Scripts/WebForms/WebParts.js"));
+                            "~/js/WebForms/WebForms.js",
+							"~/js/WebForms/WebUIValidation.js",
+							"~/js/WebForms/MenuStandards.js",
+							"~/js/WebForms/Focus.js",
+							"~/js/WebForms/GridView.js",
+							"~/js/WebForms/DetailsView.js",
+							"~/js/WebForms/TreeView.js",
+							"~/js/WebForms/WebParts.js"));
 
             // Order is very important for these files to work, they have explicit dependencies
             bundles.Add(new ScriptBundle("~/bundles/MsAjaxJs").Include(
-                    "~/Scripts/WebForms/MsAjax/MicrosoftAjax.js",
-                    "~/Scripts/WebForms/MsAjax/MicrosoftAjaxApplicationServices.js",
-                    "~/Scripts/WebForms/MsAjax/MicrosoftAjaxTimer.js",
-                    "~/Scripts/WebForms/MsAjax/MicrosoftAjaxWebForms.js"));
+					"~/js/WebForms/MsAjax/MicrosoftAjax.js",
+					"~/js/WebForms/MsAjax/MicrosoftAjaxApplicationServices.js",
+					"~/js/WebForms/MsAjax/MicrosoftAjaxTimer.js",
+					"~/js/WebForms/MsAjax/MicrosoftAjaxWebForms.js"));
 
             // Use the Development version of Modernizr to develop with and learn from. Then, when you’re
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                            "~/Scripts/modernizr-*"));
+							"~/js/modernizr-*"));
 
             // Set EnableOptimizations to false for debugging. For more information,
             // visit http://go.microsoft.com/fwlink/?LinkId=301862
@@ -42,8 +42,8 @@ namespace DiscountsYourWay
                 "respond",
                 new ScriptResourceDefinition
                 {
-                    Path = "~/Scripts/respond.min.js",
-                    DebugPath = "~/Scripts/respond.js",
+					Path = "~/js/respond.min.js",
+					DebugPath = "~/js/respond.js",
                 });
         }
     }

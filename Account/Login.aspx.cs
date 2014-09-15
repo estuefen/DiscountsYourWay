@@ -42,6 +42,14 @@ namespace DiscountsYourWay.Account
 						FailureText.Text = "Invalid username or password.";
 						ErrorMessage.Visible = true;
 					}
+					else
+					{
+						HttpCookie cookie = new HttpCookie("ClientLoginID");
+						cookie.Value = user.ClientLoginID.ToString();
+						cookie.Expires = DateTime.Now.AddMinutes(30);
+						Response.Cookies.Add(cookie);
+						Response.Redirect("~/default.aspx");
+					}
 				}
 			}
 		}
