@@ -5,9 +5,6 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="6562512125284f0a9eae51b16bf2649f" Name="Diagram1">
-        <EntityTypeShape EntityType="DiscountsYourWayModel.Client" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DiscountsYourWayModel.ClientLogin" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DiscountsYourWayModel.SecurityQuestion" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

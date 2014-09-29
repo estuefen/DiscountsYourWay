@@ -12,6 +12,8 @@ namespace DiscountsYourWay
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class DiscountsYourWayEntities : DbContext
     {
@@ -25,8 +27,18 @@ namespace DiscountsYourWay
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Client> Clients { get; set; }
-        public virtual DbSet<ClientLogin> ClientLogins { get; set; }
-        public virtual DbSet<SecurityQuestion> SecurityQuestions { get; set; }
+    
+        public virtual ObjectResult<usp_ClientLogin_SEL_ByUserNameAndPassword_Result> usp_ClientLogin_SEL_ByUserNameAndPassword(string userName, string password)
+        {
+            var userNameParameter = userName != null ?
+                new ObjectParameter("UserName", userName) :
+                new ObjectParameter("UserName", typeof(string));
+    
+            var passwordParameter = password != null ?
+                new ObjectParameter("Password", password) :
+                new ObjectParameter("Password", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_ClientLogin_SEL_ByUserNameAndPassword_Result>("usp_ClientLogin_SEL_ByUserNameAndPassword", userNameParameter, passwordParameter);
+        }
     }
 }

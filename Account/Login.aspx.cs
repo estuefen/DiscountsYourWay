@@ -6,6 +6,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Owin;
 using DiscountsYourWay.Models;
 using System.Linq;
+using System.Web.Security;
 
 namespace DiscountsYourWay.Account
 {
@@ -13,7 +14,10 @@ namespace DiscountsYourWay.Account
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			RegisterHyperLink.NavigateUrl = "Register";
+			//FormsAuthentication.SignOut();
+			//FormsAuthentication.RedirectToLoginPage();
+
+			RegisterHyperLink.NavigateUrl = "register";
 			// Enable this once you have account confirmation enabled for password reset functionality
 			// ForgotPasswordHyperLink.NavigateUrl = "Forgot";
 			OpenAuthLogin.ReturnUrl = Request.QueryString["ReturnUrl"];
@@ -32,9 +36,8 @@ namespace DiscountsYourWay.Account
 
 				using (entities)
 				{
-					ClientLogin user = (from c in entities.ClientLogins
-										where c.UserName == txtUserName.Text.Trim() && c.Password == txtPassword.Text.Trim()
-										select c).FirstOrDefault();
+					usp_ClientLogin_SEL_ByUserNameAndPassword_Result user = (from c in entities.usp_ClientLogin_SEL_ByUserNameAndPassword(txtUserName.Text, txtPassword.Text)
+																			 select c).FirstOrDefault();
 
 
 					if (user == null)
@@ -44,11 +47,13 @@ namespace DiscountsYourWay.Account
 					}
 					else
 					{
-						HttpCookie cookie = new HttpCookie("ClientLoginID");
-						cookie.Value = user.ClientLoginID.ToString();
-						cookie.Expires = DateTime.Now.AddMinutes(30);
-						Response.Cookies.Add(cookie);
-						Response.Redirect("~/default.aspx");
+						FormsAuthentication.RedirectFromLoginPage
+									 (user.UserName, chkRememberMe.Checked);
+						//HttpCookie cookie = new HttpCookie("ClientLoginID");
+						//cookie.Value = user.ClientLoginID.ToString();
+						//cookie.Expires = DateTime.Now.AddMinutes(30);
+						//Response.Cookies.Add(cookie);
+						//Response.Redirect("~/default.aspx");
 					}
 				}
 			}

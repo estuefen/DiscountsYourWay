@@ -13,6 +13,24 @@ namespace DiscountsYourWay {
     public partial class SiteMaster {
         
         /// <summary>
+        /// pnlLoggedIn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlLoggedIn;
+        
+        /// <summary>
+        /// pnlLoggedOut control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlLoggedOut;
+        
+        /// <summary>
         /// MainContent control.
         /// </summary>
         /// <remarks>
