@@ -11,5 +11,13 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_AccountType_SEL" FunctionName="DiscountsYourWayModel.Store.usp_AccountType_SEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DiscountsYourWayModel.usp_AccountType_SEL_Result">
+          <ScalarProperty Name="AccountTypeID" ColumnName="AccountTypeID" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

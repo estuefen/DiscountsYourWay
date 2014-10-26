@@ -1,0 +1,126 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="DiscountsYourWay.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Discounts Your Way </title>
+    <meta name="description" content="Learn how to code your first responsive website with the new Twitter Bootstrap 3.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+    <script src="/js/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+    <form runat="server">
+    <div class="container" id="main">
+        <div class="navbar navbar-fixed-top">
+            <div class="container">
+                <button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">
+                    <img src="/images/banner.jpg" alt="cartoon image of the DYW mascott"></a>
+                <div class="nav-collapse collapse navbar-responsive-collapse">
+                    <ul class="nav navbar-nav">
+                        <li id="liHome" class="active">
+                            <a href="/default.aspx">Home</a>
+                        </li>
+                        <li id="liViewCoupons">
+                            <a href="/view-coupons.aspx">View Coupons</a>
+                        </li>
+                        <li id="liBusinessDirectory">
+                            <a href="/business-directory.aspx">Business Directory</a>
+                        </li>
+                        <li id="liLearnMore" class="dropdown">
+                            <a href="/learn-more.aspx" class="dropdown-toggle" data-toggle="dropdown">Learn More <strong class="caret"></strong></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">Web Design</a>
+                                </li>
+                                <li>
+                                    <a href="#">Web Development</a>
+                                </li>
+                                <li>
+                                    <a href="#">SEO</a>
+                                </li>
+                                <li class="divider"></li>
+
+                                <li class="dropdown-header">More Services</li>
+                                <li>
+                                    <a href="#">Content Creation</a>
+                                </li>
+                                <li>
+                                    <a href="#">Social Media Marketing</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="liContactUs" class="dropdown">
+                            <a href="/contact-us.aspx" class="dropdown-toggle" data-toggle="dropdown">Contact Us<strong class="caret"></strong></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/business-contact.aspx">Business Contact</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="navbar-form pull-left" runat="server">
+                        <input type="text" class="form-control" placeholder="Search this site..." id="searchInput">
+                        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                    </div>
+                    <asp:Panel ID="pnlLoggedIn" runat="server" Enabled="false">
+                        <ul class="nav navbar-nav pull-right">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> My Account <strong class="caret"></strong></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="/Account/reset-password.aspx"><span class="glyphicon glyphicon-wrench"></span> Change Password</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="glyphicon glyphicon-refresh"></span> Update Coupons</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="/Account/sign-out.aspx"><span class="glyphicon glyphicon-off"></span> Sign out</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </asp:Panel>
+                    <asp:Panel ID="pnlLoggedOut" runat="server">
+                        <ul class="nav navbar-nav pull-right">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> My Account <strong class="caret"></strong></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="/Account/create-account.aspx"><span class="glyphicon glyphicon-plus-sign"></span> Create Account</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </asp:Panel>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            <div class="spacer"></div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+        </div>
+        <div>
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+            </footer>
+        </div>
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/script.js"></script>
+        <script>window.jQuery || document.write('<script src="/js/jquery-1.8.2.min.js"><\/script>')</script>
+    </div>
+    </form>
+</body>
+</html>

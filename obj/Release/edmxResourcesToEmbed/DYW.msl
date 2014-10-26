@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DiscountsYourWayModelStoreContainer" CdmEntityContainer="DiscountsYourWayEntities">
+    <FunctionImportMapping FunctionImportName="usp_ClientLogin_SEL_ByUserNameAndPassword" FunctionName="DiscountsYourWayModel.Store.usp_ClientLogin_SEL_ByUserNameAndPassword">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DiscountsYourWayModel.usp_ClientLogin_SEL_ByUserNameAndPassword_Result">
+          <ScalarProperty Name="ClientLoginID" ColumnName="ClientLoginID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_AccountType_SEL" FunctionName="DiscountsYourWayModel.Store.usp_AccountType_SEL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DiscountsYourWayModel.usp_AccountType_SEL_Result">
+          <ScalarProperty Name="AccountTypeID" ColumnName="AccountTypeID" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

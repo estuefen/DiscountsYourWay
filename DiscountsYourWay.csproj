@@ -152,6 +152,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\confirm.aspx" />
+    <Content Include="Account\create-account.aspx" />
     <Content Include="Account\forgot.aspx" />
     <Content Include="Account\login.aspx" />
     <Content Include="Account\manage.aspx" />
@@ -159,6 +160,7 @@
     <Content Include="Account\register.aspx" />
     <Content Include="Account\reset-password.aspx" />
     <Content Include="Account\reset-password-confirmation.aspx" />
+    <Content Include="Account\sign-out.aspx" />
     <Content Include="contact.aspx" />
     <Content Include="css\site.css" />
     <Content Include="css\bootstrap-glyphicons.css" />
@@ -272,11 +274,13 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Bundle.config" />
     <None Include="Project_Readme.html" />
     <Content Include="js\jquery-1.10.2.min.map" />
-    <Content Include="Site.Mobile.Master" />
+    <None Include="Properties\PublishProfiles\DiscountsYourWay.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -291,6 +295,13 @@
     </Compile>
     <Compile Include="Account\confirm.aspx.designer.cs">
       <DependentUpon>confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\create-account.aspx.cs">
+      <DependentUpon>create-account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\create-account.aspx.designer.cs">
+      <DependentUpon>create-account.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\forgot.aspx.cs">
       <DependentUpon>forgot.aspx</DependentUpon>
@@ -341,6 +352,13 @@
     <Compile Include="Account\reset-password-confirmation.aspx.designer.cs">
       <DependentUpon>reset-password-confirmation.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Account\sign-out.aspx.cs">
+      <DependentUpon>sign-out.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\sign-out.aspx.designer.cs">
+      <DependentUpon>sign-out.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -374,6 +392,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DYW.edmx</DependentUpon>
     </Compile>
+    <Compile Include="enumerations\AccountType.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -386,14 +405,10 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
-    <Compile Include="Site.Mobile.Master.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.designer.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-    </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="usp_AccountType_SEL_Result.cs">
+      <DependentUpon>DYW.tt</DependentUpon>
+    </Compile>
     <Compile Include="usp_ClientLogin_SEL_ByUserNameAndPassword_Result.cs">
       <DependentUpon>DYW.tt</DependentUpon>
     </Compile>

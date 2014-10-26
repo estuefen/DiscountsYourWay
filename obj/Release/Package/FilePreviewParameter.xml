@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="DiscountsYourWay" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Eric\\documents\\visual\ studio\ 2013\\Projects\\DiscountsYourWay\\DiscountsYourWay\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Eric\\documents\\visual\ studio\ 2013\\Projects\\DiscountsYourWay\\DiscountsYourWay\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=tcp:vuwmw1xyu1.database.windows.net,1433;Initial Catalog=DiscountsYourWay_db;User Id=estuefen@vuwmw1xyu1;Password=bowling23!" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Eric\\documents\\visual\ studio\ 2013\\Projects\\DiscountsYourWay\\DiscountsYourWay\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="DiscountsYourWayEntities-Web.config Connection String" description="" value="metadata=res://*/DYW.csdl|res://*/DYW.ssdl|res://*/DYW.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=tcp:vuwmw1xyu1.database.windows.net,1433;Initial Catalog=DiscountsYourWay_db;User Id=estuefen@vuwmw1xyu1;Password=bowling23!&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Eric\\documents\\visual\ studio\ 2013\\Projects\\DiscountsYourWay\\DiscountsYourWay\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DiscountsYourWayEntities']/@connectionString" />
+  </parameter>
+</parameters>

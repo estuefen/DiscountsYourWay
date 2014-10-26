@@ -5,6 +5,7 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="DiscountsYourWayModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="usp_AccountType_SEL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="usp_ClientLogin_SEL_ByUserNameAndPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="UserName" Type="varchar" Mode="In" />
           <Parameter Name="Password" Type="varchar" Mode="In" />
@@ -19,12 +20,17 @@
             <Parameter Name="UserName" Mode="In" Type="String" />
             <Parameter Name="Password" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="usp_AccountType_SEL" ReturnType="Collection(DiscountsYourWayModel.usp_AccountType_SEL_Result)" />
         </EntityContainer>
         <ComplexType Name="usp_ClientLogin_SEL_ByUserNameAndPassword_Result">
           <Property Type="Int32" Name="ClientLoginID" Nullable="false" />
           <Property Type="Int32" Name="ClientID" Nullable="false" />
           <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="Password" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="usp_AccountType_SEL_Result">
+          <Property Type="Int32" Name="AccountTypeID" Nullable="false" />
+          <Property Type="String" Name="AccountName" Nullable="false" MaxLength="50" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -39,6 +45,14 @@
                 <ScalarProperty Name="ClientID" ColumnName="ClientID" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_AccountType_SEL" FunctionName="DiscountsYourWayModel.Store.usp_AccountType_SEL">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DiscountsYourWayModel.usp_AccountType_SEL_Result">
+                <ScalarProperty Name="AccountTypeID" ColumnName="AccountTypeID" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

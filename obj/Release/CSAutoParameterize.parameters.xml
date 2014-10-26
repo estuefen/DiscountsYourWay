@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\v11.0;AttachDbFilename=|DataDirectory|\aspnet-DiscountsYourWay-20140818074244.mdf;Initial Catalog=aspnet-DiscountsYourWay-20140818074244;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Eric\\documents\\visual\ studio\ 2013\\Projects\\DiscountsYourWay\\DiscountsYourWay\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="DiscountsYourWayEntities-Web.config Connection String" description="DiscountsYourWayEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/DYW.csdl|res://*/DYW.ssdl|res://*/DYW.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=ERIC-HP-NEW\SQLEXPRESS;initial catalog=DiscountsYourWay;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Eric\\documents\\visual\ studio\ 2013\\Projects\\DiscountsYourWay\\DiscountsYourWay\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DiscountsYourWayEntities']/@connectionString" />
+  </parameter>
+</parameters>

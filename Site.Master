@@ -92,8 +92,13 @@
                     </asp:Panel>
                     <asp:Panel ID="pnlLoggedOut" runat="server">
                         <ul class="nav navbar-nav pull-right">
-                            <li>
-                                <a href="/Account/login.aspx"><span class="glyphicon glyphicon-off"></span> Business Sign In</a>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> My Account <strong class="caret"></strong></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="/Account/create-account.aspx"><span class="glyphicon glyphicon-plus-sign"></span> Create Account</a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </asp:Panel>

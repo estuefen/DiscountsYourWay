@@ -40,5 +40,10 @@ namespace DiscountsYourWay
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_ClientLogin_SEL_ByUserNameAndPassword_Result>("usp_ClientLogin_SEL_ByUserNameAndPassword", userNameParameter, passwordParameter);
         }
+    
+        public virtual ObjectResult<usp_AccountType_SEL_Result> usp_AccountType_SEL()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_AccountType_SEL_Result>("usp_AccountType_SEL");
+        }
     }
 }
