@@ -179,6 +179,13 @@
     <Content Include="images\brightGuy.png" />
     <Content Include="images\brightGuy2.png" />
     <Content Include="images\brightGuy7.png" />
+    <Content Include="images\ButtonMenuCashChallenge_2.png" />
+    <Content Include="images\ButtonMenuGarageSale_2.png" />
+    <Content Include="images\ButtonMenuHelpWanted_2.png" />
+    <Content Include="images\ButtonMenuHotDeals_2.png" />
+    <Content Include="images\ButtonMenuMusicStream.png" />
+    <Content Include="images\ButtonMenuRoadsideService_2.png" />
+    <Content Include="images\ButtonMenuSearchDeals_2.png" />
     <Content Include="images\Capture.JPG" />
     <Content Include="images\cardProgram.JPG" />
     <Content Include="images\cardProgramWith details.png" />
@@ -193,7 +200,10 @@
     <Content Include="images\dyw3.JPG" />
     <Content Include="images\dywCOM.JPG" />
     <Content Include="images\dYWLOGO.jpg" />
+    <Content Include="images\DYW_Card_Logo.png" />
     <Content Include="images\freeSignup.JPG" />
+    <Content Include="images\Heroes_Shield.png" />
+    <Content Include="images\Heroes_Shield2.png" />
     <Content Include="images\item_psd2html5.jpg" />
     <Content Include="images\item_webhosting101.jpg" />
     <Content Include="images\li-bullets.png" />
@@ -273,6 +283,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
+    <Content Include="view-coupons.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -411,6 +422,13 @@
     </Compile>
     <Compile Include="usp_ClientLogin_SEL_ByUserNameAndPassword_Result.cs">
       <DependentUpon>DYW.tt</DependentUpon>
+    </Compile>
+    <Compile Include="view-coupons.aspx.cs">
+      <DependentUpon>view-coupons.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view-coupons.aspx.designer.cs">
+      <DependentUpon>view-coupons.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

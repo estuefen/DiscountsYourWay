@@ -49,3 +49,29 @@ C:\Users\Eric\documents\visual studio 2013\Projects\DiscountsYourWay\DiscountsYo
 C:\Users\Eric\documents\visual studio 2013\Projects\DiscountsYourWay\DiscountsYourWay\obj\Debug\DiscountsYourWay.csprojResolveAssemblyReference.cache
 C:\Users\Eric\documents\visual studio 2013\Projects\DiscountsYourWay\DiscountsYourWay\obj\Debug\DiscountsYourWay.dll
 C:\Users\Eric\documents\visual studio 2013\Projects\DiscountsYourWay\DiscountsYourWay\obj\Debug\DiscountsYourWay.pdb
+C:\Users\chadreinier\Documents\GitHub\DiscountsYourWay\bin\DiscountsYourWay.dll.config
+C:\Users\chadreinier\Documents\GitHub\DiscountsYourWay\bin\DiscountsYourWay.dll
+C:\Users\chadreinier\Documents\GitHub\DiscountsYourWay\bin\DiscountsYourWay.pdb
+C:\Users\chadreinier\Documents\GitHub\DiscountsYourWay\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\chadreinier\Documents\GitHub\DiscountsYourWay\bin\Microsoft.Web.Infrastructure.xml
+C:\Users\chadreinier\Documents\GitHub\DiscountsYourWay\bin\System.Web.Optimization.xml
+C:\Users\chadreinier\Documents\GitHub\DiscountsYourWay\bin\Antlr3.Runtime.pdb
+C:\Users\chadreinier\Documents\GitHub\DiscountsYourWay\bin\Newtonsoft.Json.xml
+C:\Users\chadreinier\Documents\GitHub\DiscountsYourWay\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\chadreinier\Documents\GitHub\DiscountsYourWay\bin\EntityFramework.xml
+C:\Users\chadreinier\Documents\GitHub\DiscountsYourWay\bin\EntityFramework.SqlServer.xml
+C:\Users\chadreinier\Documents\GitHub\DiscountsYourWay\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\chadreinier\Documents\GitHub\DiscountsYourWay\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\chadreinier\Documents\GitHub\DiscountsYourWay\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\chadreinier\Documents\GitHub\DiscountsYourWay\bin\Microsoft.Owin.xml
+C:\Users\chadreinier\Documents\GitHub\DiscountsYourWay\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\chadreinier\Documents\GitHub\DiscountsYourWay\bin\Microsoft.Owin.Security.xml
+C:\Users\chadreinier\Documents\GitHub\DiscountsYourWay\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\chadreinier\Documents\GitHub\DiscountsYourWay\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\chadreinier\Documents\GitHub\DiscountsYourWay\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\chadreinier\Documents\GitHub\DiscountsYourWay\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\chadreinier\Documents\GitHub\DiscountsYourWay\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\chadreinier\Documents\GitHub\DiscountsYourWay\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\chadreinier\Documents\GitHub\DiscountsYourWay\obj\Debug\DiscountsYourWay.csprojResolveAssemblyReference.cache
+C:\Users\chadreinier\Documents\GitHub\DiscountsYourWay\obj\Debug\DiscountsYourWay.dll
+C:\Users\chadreinier\Documents\GitHub\DiscountsYourWay\obj\Debug\DiscountsYourWay.pdb

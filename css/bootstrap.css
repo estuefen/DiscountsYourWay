@@ -459,7 +459,7 @@ h6 small,
 h1,
 h2,
 h3 {
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 10px;
 }
 
@@ -2743,14 +2743,15 @@ button.close {
 .navbar-brand {
   display: block;
   max-width: 200px;
-  padding: 0px 30px;
+  margin-top: 28px;
+ /* padding: 0px 30px;
   margin-right: auto;
   margin-left: auto;
   font-size: 18px;
   font-weight: 500;
   line-height: 20px;
   color: #FFF;
-  text-align: center;
+  text-align: center;*/
 }
 
 .navbar-brand:hover,
