@@ -49,3 +49,5 @@ C:\Users\Eric\documents\visual studio 2013\Projects\DiscountsYourWay\DiscountsYo
 C:\Users\Eric\documents\visual studio 2013\Projects\DiscountsYourWay\DiscountsYourWay\obj\Release\DiscountsYourWay.csprojResolveAssemblyReference.cache
 C:\Users\Eric\documents\visual studio 2013\Projects\DiscountsYourWay\DiscountsYourWay\obj\Release\DiscountsYourWay.dll
 C:\Users\Eric\documents\visual studio 2013\Projects\DiscountsYourWay\DiscountsYourWay\obj\Release\DiscountsYourWay.pdb
+C:\Users\Eric\documents\visual studio 2013\Projects\DiscountsYourWay\DiscountsYourWay\bin\PayPalCoreSDK.dll
+C:\Users\Eric\documents\visual studio 2013\Projects\DiscountsYourWay\DiscountsYourWay\bin\PayPalMerchantSDK.dll

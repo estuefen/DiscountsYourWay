@@ -5,6 +5,11 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="6562512125284f0a9eae51b16bf2649f" Name="Diagram1">
+        <EntityTypeShape EntityType="DiscountsYourWayModel.Client" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DiscountsYourWayModel.ClientLogin" Width="1.5" PointX="3.375" PointY="3.75" />
+        <EntityTypeShape EntityType="DiscountsYourWayModel.ClientAccount" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DiscountsYourWayModel.State" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="DiscountsYourWayModel.Category" Width="1.5" PointX="5.375" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -6,6 +6,37 @@
       <Parameter Name="Password" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="usp_AccountType_SEL" ReturnType="Collection(DiscountsYourWayModel.usp_AccountType_SEL_Result)" />
+    <FunctionImport Name="usp_Client_SEL_ClientCount_ByCompanyName" ReturnType="Collection(Int32)">
+      <Parameter Name="BusinessName" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="Clients" EntityType="DiscountsYourWayModel.Client" />
+    <EntitySet Name="ClientLogins" EntityType="DiscountsYourWayModel.ClientLogin" />
+    <EntitySet Name="ClientAccounts" EntityType="DiscountsYourWayModel.ClientAccount" />
+    <FunctionImport Name="usp_ClientLogin_SEL_ByUserName" ReturnType="Collection(DiscountsYourWayModel.usp_ClientLogin_SEL_ByUserName_Result)">
+      <Parameter Name="UserName" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="States" EntityType="DiscountsYourWayModel.State" />
+    <EntitySet Name="Categories" EntityType="DiscountsYourWayModel.Category" />
+    <FunctionImport Name="usp_Cities_SEL_Display" ReturnType="Collection(DiscountsYourWayModel.usp_Cities_SEL_Display_Result)" />
+    <FunctionImport Name="usp_Client_SAV" ReturnType="Collection(Int32)">
+      <Parameter Name="BusinessName" Mode="In" Type="String" />
+      <Parameter Name="ContactName" Mode="In" Type="String" />
+      <Parameter Name="Address" Mode="In" Type="String" />
+      <Parameter Name="City" Mode="In" Type="String" />
+      <Parameter Name="State" Mode="In" Type="String" />
+      <Parameter Name="PostalCode" Mode="In" Type="String" />
+      <Parameter Name="Phone" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="AccountTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="LogoURL" Mode="In" Type="String" />
+      <Parameter Name="DisplayStates" Mode="In" Type="String" />
+      <Parameter Name="DisplayCities" Mode="In" Type="String" />
+      <Parameter Name="DisplayCategories" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_Client_UPD_Logo">
+      <Parameter Name="LogoURL" Mode="In" Type="String" />
+      <Parameter Name="ClientID" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="usp_ClientLogin_SEL_ByUserNameAndPassword_Result">
     <Property Type="Int32" Name="ClientLoginID" Nullable="false" />
@@ -16,5 +47,65 @@
   <ComplexType Name="usp_AccountType_SEL_Result">
     <Property Type="Int32" Name="AccountTypeID" Nullable="false" />
     <Property Type="String" Name="AccountName" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="ClientID" />
+    </Key>
+    <Property Name="ClientID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContactName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BusinessName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PostalCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="AccountTypeID" Type="Int32" Nullable="false" />
+    <Property Name="LogoURL" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ClientLogin">
+    <Key>
+      <PropertyRef Name="ClientLoginID" />
+    </Key>
+    <Property Name="ClientLoginID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="ClientID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ClientAccount">
+    <Key>
+      <PropertyRef Name="ClientAccountID" />
+    </Key>
+    <Property Name="ClientAccountID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AccountStartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AccountEndDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ClientID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <ComplexType Name="usp_ClientLogin_SEL_ByUserName_Result">
+    <Property Type="Int32" Name="ClientLoginID" Nullable="false" />
+    <Property Type="Int32" Name="ClientID" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="1000" />
+  </ComplexType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="StateID" />
+    </Key>
+    <Property Name="StateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StateName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="StateAbbreviation" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="usp_Cities_SEL_Display_Result">
+    <Property Type="Int32" Name="CityID" Nullable="false" />
+    <Property Type="Int32" Name="StateID" Nullable="false" />
+    <Property Type="String" Name="DisplayName" Nullable="false" MaxLength="104" />
   </ComplexType>
 </Schema>
